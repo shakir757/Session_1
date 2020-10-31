@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingVertical="2dp"
+    android:layout_marginBottom="2dp"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image_view_country"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/us" />
+
+    <TextView
+        android:id="@+id/text_view_valute_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="USD"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/image_view_country"
+        app:layout_constraintStart_toEndOf="@+id/image_view_country"
+        app:layout_constraintTop_toTopOf="@+id/image_view_country" />
+
+    <TextView
+        android:id="@+id/text_view_valute_full_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Американский доллар"
+        android:textSize="10sp"
+        android:textColor="@color/colorTextRecycler"
+        app:layout_constraintStart_toStartOf="@+id/image_view_country"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_country" />
+
+    <TextView
+        android:id="@+id/text_view_valute_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="64,44"
+        android:textColor="@color/colorTextRecycler"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_valute_full_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/image_view_country" />
+
+    <TextView
+        android:id="@+id/text_view_up_dow_buy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="up"
+        android:textSize="10sp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_valute_buy"
+        app:layout_constraintStart_toEndOf="@+id/text_view_valute_buy"
+        app:layout_constraintTop_toTopOf="@+id/text_view_valute_buy" />
+
+    <TextView
+        android:id="@+id/text_view_up_dow_sale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="down"
+        android:textSize="10sp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_valute_buy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_view_valute_buy" />
+
+    <TextView
+        android:id="@+id/text_view_valute_sale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="64,44"
+        android:textColor="@color/colorTextRecycler"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_up_dow_sale"
+        app:layout_constraintEnd_toStartOf="@+id/text_view_up_dow_sale"
+        app:layout_constraintTop_toTopOf="@+id/text_view_up_dow_sale" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

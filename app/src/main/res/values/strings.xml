@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Session_1</string>
+
+    <string name="header_main">WorldSkills Bank</string>
+    <string name="header_card_location">Отделения и банкоматы</string>
+    <string name="header_card_volute">Курсы валют</string>
+    <string name="enter">Войти</string>
+    <string name="usd">USD</string>
+    <string name="eur">EUR</string>
+    
+    <string name="buy">Покупка</string>
+    <string name="sale">Продажа</string>
+</resources>

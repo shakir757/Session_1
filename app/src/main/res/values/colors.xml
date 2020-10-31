@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorHeader">#9B59B6</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlue">#1C42B0</color>
+    <color name="colorBlack">#000000</color>
+
+    <color name="colorBgAtm">#EFEFF4</color>
+    <color name="colorTextAtm">#8E8E93</color>
+    <color name="colorGray">#C8C7CC</color>
+    <color name="colorTextRecycler">#1C42B0</color>
+</resources>
