@@ -28,6 +28,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        button_enter.setOnClickListener {
+            val myDialogFragment = MyDialogFragment()
+            val manager = supportFragmentManager
+            myDialogFragment.show(manager, "myDialog")
+        }
+
         parsingVolutes()
         getDate()
     }

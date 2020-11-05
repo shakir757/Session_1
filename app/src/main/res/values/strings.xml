@@ -10,4 +10,12 @@
     
     <string name="buy">Покупка</string>
     <string name="sale">Продажа</string>
+
+    <!-- Alert Dialog -->
+    <string name="cancel">Отмена</string>
+    <string name="add">Добавить</string>
+    <string name="alert_dialog_title">Авторизация</string>
+    <string name="alert_dialog_description">Введите Ваш логин и пароль</string>
+    <string name="alert_dialog_login">Логин</string>
+    <string name="alert_dialog_password">Пароль</string>
 </resources>
