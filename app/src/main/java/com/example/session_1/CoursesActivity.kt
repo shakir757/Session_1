@@ -4,22 +4,19 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
-private lateinit var recyclerView: RecyclerView
-private lateinit var viewAdapter: RecyclerView.Adapter<*>
-private lateinit var viewManager: RecyclerView.LayoutManager
+import kotlinx.android.synthetic.main.activity_courses.*
 
 class CoursesActivity : AppCompatActivity() {
+
+    val viewAdapter = ValutesAdapter()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_courses)
 
-        viewManager = LinearLayoutManager(this)
-        viewAdapter = ValutesAdapter()
-
-        recyclerView = findViewById<RecyclerView>(R.id.recycler_view_courses).apply {
+        recycler_view_courses.apply {
             setHasFixedSize(true)
-            layoutManager = viewManager
+            layoutManager = LinearLayoutManager(context)
             adapter = viewAdapter
         }
     }

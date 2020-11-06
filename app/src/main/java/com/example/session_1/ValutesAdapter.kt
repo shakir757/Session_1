@@ -5,18 +5,18 @@ import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 
-class ValutesAdapter : RecyclerView.Adapter<ValutesAdapter.MyViewHolder>() {
+class ValutesAdapter : RecyclerView.Adapter<ValutesAdapter.ValutesViewHolder>() {
 
-    class MyViewHolder(val element: ConstraintLayout) : RecyclerView.ViewHolder(element)
+    class ValutesViewHolder(val element: ConstraintLayout) : RecyclerView.ViewHolder(element)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ValutesAdapter.MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ValutesViewHolder {
         val element = LayoutInflater.from(parent.context)
             .inflate(R.layout.recycler_item_valute, parent, false) as ConstraintLayout
 
-        return MyViewHolder(element)
+        return ValutesViewHolder(element)
     }
 
-    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ValutesViewHolder, position: Int) {
     }
 
     override fun getItemCount() = 15
