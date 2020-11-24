@@ -7,7 +7,7 @@
     <string name="enter">Войти</string>
     <string name="usd">USD</string>
     <string name="eur">EUR</string>
-    
+
     <string name="buy">Покупка</string>
     <string name="sale">Продажа</string>
 
@@ -18,4 +18,24 @@
     <string name="alert_dialog_description">Введите Ваш логин и пароль</string>
     <string name="alert_dialog_login">Логин</string>
     <string name="alert_dialog_password">Пароль</string>
+
+    <!-- NavigationView -->
+    <string name="main">Главная</string>
+    <string name="pays">Платежи</string>
+    <string name="history">История</string>
+    <string name="dialogs">Диалоги</string>
+    <string name="title_activity_navigation_view">MainActivity</string>
+
+    <string name="tool_bar_edit_text">Search people and places</string>
+    <string name="tool_bar_name">Сергей Владимирович</string>
+    <string name="my_cards">МОИ КАРТЫ</string>
+    <string name="my_bank_account">МОИ СЧЕТА</string>
+    <string name="my_credits">МОИ КРЕДИТЫ</string>
+    
+    <!-- Settings Person -->
+    <string name="change_password">Изменение пароля</string>
+    <string name="change_login">Изменение логина</string>
+    <string name="history_visits">История посещений</string>
+    <string name="info_app">Информация о приложении</string>
+    <string name="exit">Выход</string>
 </resources>

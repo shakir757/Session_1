@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         button_enter.setOnClickListener {
             val myDialogFragment = MyDialogFragment()
             val manager = supportFragmentManager
+            myDialogFragment.dialog?.window?.setBackgroundDrawableResource(R.drawable.background_alert_dialog)
             myDialogFragment.show(manager, "myDialog")
         }
 
@@ -38,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         getDate()
     }
 
-    fun parsingVolutes(){
+    private fun parsingVolutes(){
         val url = "https://www.cbr-xml-daily.ru/daily_json.js"
         val requestQueue = Volley.newRequestQueue(this)
         val responseListener = Response.Listener<JSONObject> { response ->
@@ -65,7 +66,7 @@ class MainActivity : AppCompatActivity() {
         requestQueue.add(request)
     }
 
-    fun getDate(){
+    private fun getDate(){
         val c = Calendar.getInstance()
 
         val year = c.get(Calendar.YEAR)

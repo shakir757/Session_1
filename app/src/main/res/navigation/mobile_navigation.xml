@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_main">
+
+    <fragment
+        android:id="@+id/navigation_main"
+        android:name="com.example.session_1.ui.main.MainFragment"
+        android:label="@string/main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_navigation_main_to_settings_person"
+            app:destination="@id/settings_person"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
+
+    <fragment android:id="@+id/settings_person"
+        android:name="com.example.session_1.ui.settings_person.SettingsPersonFragment"
+        android:label="Настройки пользователя"
+        tools:layout="@layout/fragment_settings_person"/>
+
+    <fragment
+        android:id="@+id/navigation_pays"
+        android:name="com.example.session_1.ui.pays.PaysFragment"
+        android:label="@string/pays"
+        tools:layout="@layout/fragment_pays" />
+
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.example.session_1.ui.history.HistoryFragment"
+        android:label="@string/history"
+        tools:layout="@layout/fragment_history" />
+
+    <fragment
+        android:id="@+id/navigation_dialogs"
+        android:name="com.example.session_1.ui.dialogs.DialogsFragment"
+        android:label="@string/dialogs"
+        tools:layout="@layout/fragment_dialogs"/>
+
+</navigation>
