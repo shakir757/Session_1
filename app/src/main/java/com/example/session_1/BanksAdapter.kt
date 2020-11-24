@@ -1,5 +1,6 @@
 package com.example.session_1
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,6 +29,7 @@ class BanksAdapter(var listBanks: List<Bank>) : RecyclerView.Adapter<BanksAdapte
             holder.status.text = "Работает"
         } else {
             holder.status.text = "Не работает"
+            holder.status.setTextColor(Color.parseColor("#ff0000"))
         }
         holder.time.text = listBanks[position].time
     }

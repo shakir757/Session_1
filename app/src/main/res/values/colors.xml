@@ -8,9 +8,19 @@
     <color name="colorWhite">#ffffff</color>
     <color name="colorBlue">#1C42B0</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorRed">#FF0000</color>
 
     <color name="colorBgAtm">#EFEFF4</color>
     <color name="colorTextAtm">#8E8E93</color>
     <color name="colorGray">#C8C7CC</color>
     <color name="colorTextRecycler">#1C42B0</color>
+    
+    <color name="colorBgFragments">#303030</color>
+    <color name="colorMenu">#212121</color>
+    <color name="colorItem">#9B59B6</color>
+
+    <color name="colorToolBarHintEditText">#AEAEAE</color>
+    
+    <color name="colorHeaderListItem">#C0C0C3</color>
+    <color name="colorLine">#949498</color>
 </resources>

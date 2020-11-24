@@ -3,6 +3,7 @@ package com.example.session_1
 import android.app.AlertDialog
 import android.app.Dialog
 import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
@@ -19,6 +20,8 @@ class MyDialogFragment : DialogFragment() {
                 .setNegativeButton(R.string.add,
                     DialogInterface.OnClickListener { dialog, id ->
                         Toast.makeText(context, "Success", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(context, NavigationViewActivity::class.java)
+                        startActivity(intent)
                     })
                 .setPositiveButton(R.string.cancel,
                     DialogInterface.OnClickListener { dialog, id ->

@@ -1,6 +1,7 @@
 package com.example.session_1
 
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,6 +16,7 @@ import org.json.JSONObject
 class CoursesActivity : AppCompatActivity() {
 
     val viewAdapter = ValutesAdapter(listOf())
+    val jsonValutesParcingList: MutableList<Valute> = arrayListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,11 +27,25 @@ class CoursesActivity : AppCompatActivity() {
             adapter = viewAdapter
         }
 
-        viewAdapter.submitList(parcingDataValues())
-        viewAdapter.notifyDataSetChanged()
+        parcingDataValues()
+        val timer = object: CountDownTimer(5000, 500){
+            override fun onTick(millisUntilFinished: Long) {
+                if (jsonValutesParcingList != null){
+                    viewAdapter.submitList(jsonValutesParcingList)
+                    viewAdapter.notifyDataSetChanged()
+                    onFinish()
+                }
+            }
+
+            override fun onFinish() {
+
+            }
+        }
+        timer.start()
+
     }
 
-    private fun parcingDataValues(): List<Valute> {
+    private fun parcingDataValues()/*: List<Valute>*/ {
         val url = "https://www.cbr-xml-daily.ru/daily_json.js"
         val listValutes: List<String> = listOf(
             "AUD", "AZN", "GBP",
@@ -38,7 +54,6 @@ class CoursesActivity : AppCompatActivity() {
             "PLN", "RON", "XDR", "SGD", "TJS", "TRY", "TMT", "UZS",
             "UAH", "CZK", "SEK", "CHF", "ZAR", "KRW", "JPY"
         )
-        val jsonValutesParcingList: MutableList<Valute> = arrayListOf()
 
         val requestQueue = Volley.newRequestQueue(this)
         val responseListener = Response.Listener<JSONObject> { response ->
@@ -69,23 +84,6 @@ class CoursesActivity : AppCompatActivity() {
 
         requestQueue.add(request)
 
-        return jsonValutesParcingList
-    }
-
-    fun testData(): List<Valute>{
-        return listOf(
-            Valute(
-                charCode = "usd",
-                name = "valuteName",
-                currencyValue = 26.555,
-                currencyPrevisionValue = 24.8
-            ),
-            Valute(
-                charCode = "eur",
-                name = "valuteName",
-                currencyValue = 28.555,
-                currencyPrevisionValue = 2444.8
-            ),
-        )
+        /*return jsonValutesParcingList*/
     }
 }
